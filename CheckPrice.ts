@@ -64,7 +64,7 @@ async function firstTest(targetPrice: number, alertCommand: string) {
 }
 
 const minutesBeforeRunning = 30;
-const alertIfBelowInDollars = 800;
+const alertIfBelowInDollars = 900;
 
 const alertCommandForYourOS = `notify-send "On Sale"`; //this will run in your terminal if below alertIfBelowInDollars price
 
