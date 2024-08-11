@@ -1,5 +1,6 @@
 # MonitorPriceChecker
 
+This program is currently setup to check the price of the Alienware AW3423DWF 34 Monitor on dell.com and bestbuy.com and notify you when it is on sale
 
 ## Requirements
 
