@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "scripts": {
+    "build": "npx tsx CheckPrice.ts"
+  },
+  "dependencies": {
+    "mocha": "10.7.0",
+    "selenium-webdriver": "^4.23.0",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/selenium-webdriver": "^4.1.24",
+    "tsx": "^4.17.0"
+  }
+}
