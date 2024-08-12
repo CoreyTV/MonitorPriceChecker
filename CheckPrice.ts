@@ -17,17 +17,12 @@ async function firstTest(targetPrice: number, alertCommand: string) {
       .forBrowser(Browser.CHROME)
       .setChromeOptions(options)
       .build();
-    // await driver.manage().setTimeouts({ implicit: 2000 });
     await driver.get(
       "https://www.dell.com/en-us/shop/alienware-34-curved-qd-oled-gaming-monitor-aw3423dwf/apd/210-bfrp/monitors-monitor-accessories"
     );
     const dellPriceTag = await driver
       .findElement(By.xpath("//div[@class='ps-dell-price ps-simplified']"))
       .getAttribute("innerText");
-    // console.log(
-    //   `${dellPriceTag} at "https://www.dell.com/en-us/shop/alienware-34-curved-qd-oled-gaming-monitor-aw3423dwf/apd/210-bfrp/monitors-monitor-accessories"`
-    // );
-
     await driver.get(
       "https://www.bestbuy.com/site/alienware-aw3423dwf-34-quantum-dot-oled-curved-ultrawide-gaming-monitor-165hz-amd-freesync-premium-pro-vesa-hdmiusb-dark-side-of-the-moon/6536990.p?skuId=6536990"
     );
@@ -38,10 +33,6 @@ async function firstTest(targetPrice: number, alertCommand: string) {
         )
       )
       .getAttribute("innerText");
-    // console.log(
-    //   `${bestBuyPricesTag} at "https://www.bestbuy.com/site/alienware-aw3423dwf-34-quantum-dot-oled-curved-ultrawide-gaming-monitor-165hz-amd-freesync-premium-pro-vesa-hdmiusb-dark-side-of-the-moon/6536990.p?skuId=6536990"`
-    // );
-
     if (
       Number(bestBuyPricesTag.match(/\d+/g)[0]) <= targetPrice ||
       Number(dellPriceTag.match(/\d+/g)[0]) <= targetPrice
